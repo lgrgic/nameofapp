@@ -27,7 +27,8 @@ gem 'nokogiri', '~> 1.6', '>= 1.6.7.rc4'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
-
+# Use Puma as the app server
+gem 'puma', '~> 3.11'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -44,6 +45,6 @@ group :development do
   gem 'spring'
 end
 
-group :test, :production do
+group :production do
   gem 'pg'
 end
