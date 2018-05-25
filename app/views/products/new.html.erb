@@ -1,5 +1,8 @@
-<h1>New Product</h1>
+<div class="container-fluid">
+    <h1>Add New Product</h1>
+  <div class="new-product">
+    <%= render 'form', product: @product %>
 
-<%= render 'form', product: @product %>
-
-<%= link_to 'Back', products_path %>
+    <%= link_to 'Back', products_path %>
+  </div>
+</div>

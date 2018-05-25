@@ -10,7 +10,6 @@ p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  margin: 33px;
 }
 
 pre {
@@ -37,9 +36,7 @@ th {
 }
 
 td {
-  padding-bottom: 7px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding: 0 5px 7px;
 }
 
 div {
