@@ -1,20 +1,20 @@
 
     <p id="notice"><%= notice %></p>
-    <div class="container-fluid">
-      <div class="show-product"
+<div class="container-fluid">
+  <div class="show-product">
     <p>
-      <strong>Name:</strong>
+      <strong>Product name:</strong>
       <%= @product.name %>
     </p>
 
     <p>
-      <strong>Description:</strong>
+      <strong>Details:</strong>
       <%= @product.description %>
     </p>
 
     <p>
-      <strong>Image url:</strong>
-      <%= @product.image_url %>
+      <strong>Photo:</strong>
+      <%= image_tag(@product.image_url, class: "img-responsive") if @product.image_url %>
     </p>
 
     <p>
@@ -23,7 +23,7 @@
     </p>
 
     <p>
-      <strong>Price:</strong>
+      <strong>Price €:</strong>
       <%= @product.price %>
     </p>
 
