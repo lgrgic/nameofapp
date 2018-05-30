@@ -35,3 +35,6 @@
 p {
   word-wrap: break-word;
 }
+.row > *:nth-child(3n+4) {
+  clear: left;
+}
