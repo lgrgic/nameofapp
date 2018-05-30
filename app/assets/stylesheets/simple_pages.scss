@@ -1,27 +1,18 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$font-stack:    Helvetica, sans-serif;
-$primary-color: black;
-$bgDefault: #d6f5d6;
-$fColor: #33ff77;
 h1 {
   text-align: center;
-  color: $primary-color
 }
 body {
   padding-top: 50px;
   margin-bottom: 60px;
-  background-color: $bgDefault
+  background-color: #c8ead9
 }
 /* Footer */
 html {
   position: relative;
   min-height: 100%;
-}
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
 }
 .footer {
   text-align: center;

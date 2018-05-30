@@ -5,12 +5,10 @@
   padding-top: 100px;
   text-align: center;
 }
-
 .edit-product {
   padding-top: 100px;
   text-align: center;
 }
-
 .show-product {
   display: block;
   margin-left: auto;
@@ -29,4 +27,11 @@
 }
 .offer {
   text-align: center;
+}
+.thumbnail:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  background: #daf1e2;
+}
+p {
+  word-wrap: break-word;
 }
