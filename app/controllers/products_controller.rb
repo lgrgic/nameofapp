@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
+    @featured_product = Product.first
   end
 
   # GET /products/1
