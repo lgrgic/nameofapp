@@ -5,4 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Product.create(name: "seed-generated product", description: "I also created this product without using the HTML form!")
+Product.create(name: "Planet Globula terrarium", description: "Handmade terrarium", image_url: "terrarium.JPG" )
+Product.create(name: "Planet Globula notepad", description: "Handmade notepad with stone paper and himalayan paper cover. Various sizes", image_url: "notepad.JPG" )
+Product.create(name: "Planet Globula terrarium kit", description: "Handmade terrarium kit with instructions", image_url: "kit.jpg" )
+Product.create(name: "Acrylic painting", description: "Acrylic painting on Hahnemühle paper 50x65cm", image_url: "pgpainting.JPG" )
+Product.create(name: "Planet Globula notepad", description: "Handmade notepad with papyrus paper cover.", image_url: "papirus.JPG" )
+Product.create(name: "Acrylic painting", description: "Acrylic painting on Hahnemühle paper 50x65cm", image_url: "framed2.JPG" )
