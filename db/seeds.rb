@@ -11,5 +11,5 @@ Product.create(name: "Planet Globula terrarium kit", description: "Handmade terr
 Product.create(name: "Acrylic painting", description: "Acrylic painting on Hahnemühle paper 50x65cm", image_url: "pgpainting.JPG" )
 Product.create(name: "Planet Globula notepad", description: "Handmade notepad with papyrus paper cover.", image_url: "papirus.JPG" )
 Product.create(name: "Acrylic painting", description: "Acrylic painting on Hahnemühle paper 50x65cm", image_url: "framed2.JPG" )
-Order.create(user_id: 1, product_id: 52, total: 10.0)
-Order.create(user_id: 1, product_id: 55, total: 5.0)
+Order.create(user_id: 1, product_id: 87, total: 10.0)
+Order.create(user_id: 1, product_id: 88, total: 5.0)
