@@ -11,14 +11,12 @@
       </ul>
     </div>
   <% end %>
-<div class="container-fluid">
-  <div class="row">
+<div class="container">
         <div class="field">
           <%= f.label :name %>
           <%= f.text_field :name %>
         </div>
-  </div>
-</div>
+
         <div class="field">
           <%= f.label :description %>
           <%= f.text_area :description %>
@@ -38,6 +36,7 @@
           <%= f.label :price %>
           <%= f.text_field :price %>
         </div>
+</div>
 
         <div class="actions">
           <%= f.submit %>

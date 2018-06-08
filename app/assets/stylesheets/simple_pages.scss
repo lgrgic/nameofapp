@@ -8,11 +8,26 @@ body {
   padding-top: 50px;
   margin-bottom: 60px;
   background-image: url("leafs.JPG");
+  background-attachment: fixed;
 }
 /* Footer */
 html {
   position: relative;
   min-height: 100%;
+}
+.navbar-inverse {
+  border-bottom-color: #ffffff;
+}
+.navbar-inverse .navbar-nav > li > a  {
+  color: #ffffff;
+  font-size: 17px;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #339966;
+}
+.navbar-brand {
+  padding-bottom: 15px;
+  padding-top: 0px;
 }
 .carousel-control {
   color: #c8ead9;
