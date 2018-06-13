@@ -15,6 +15,22 @@ html {
   position: relative;
   min-height: 100%;
 }
+.btn-danger {
+  background-color: #31814d;
+  border-color: #31814d;
+  margin-top: -15px;
+  padding-bottom: 10px;
+  margin-right: 30px;
+  color: white;
+}
+input {
+  border: none;
+  padding-top: 10px;
+  margin-top: 10px;
+  font-size: 20px;
+  padding-bottom: 5px;
+  border-radius: 20px;
+}
 .navbar-inverse {
   border-bottom-color: #ffffff;
 }

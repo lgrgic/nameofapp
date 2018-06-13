@@ -36,6 +36,12 @@
           <li role="presentation"><%= link_to "Products", products_path %></li>
           <li role="presentation"><%= link_to "Orders", orders_path %></li>
         </ul>
+        <div class="navbar-right">
+            <%= form_tag("/products", method: "get") do %>
+            <%= text_field_tag(:q, nil, id: 'q', value: params[:q], placeholder: "  Find products") %>
+            <%= submit_tag("Search", class: 'btn btn-danger') %>
+        </div>
+        <% end %>
       </div>
      </nav>
     </div>
