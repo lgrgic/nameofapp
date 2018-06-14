@@ -7,12 +7,13 @@ class ProductsController < ApplicationController
     if params[:q]
       search_term = params[:q]
       @products = Product.search(search_term)
-      like_string = Rails.env.production? ? "ilike" : "LIKE"
     else
       @products = Product.all
     end
   end
-
+  def self.search(search_term)
+    Product.where("name ILIKE ?", "%#{search_term}%")
+  end
   # GET /products/1
   # GET /products/1.json
   def show
