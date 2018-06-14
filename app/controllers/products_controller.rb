@@ -4,7 +4,6 @@ class ProductsController < ApplicationController
   def index
     if params[:q]
       search_term = params[:q]
-      like_string = Rails.env.production? ? "ilike" : "LIKE"
       @products = Product.search(search_term)
     else
       @products = Product.all
