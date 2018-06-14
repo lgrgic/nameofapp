@@ -7,6 +7,7 @@ class ProductsController < ApplicationController
     if params[:q]
       search_term = params[:q]
       @products = Product.search(search_term)
+      like_string = Rails.env.production? ? "ilike" : "LIKE"
     else
       @products = Product.all
     end

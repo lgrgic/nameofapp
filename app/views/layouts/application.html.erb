@@ -18,7 +18,7 @@
      <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #a1dec0">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">
-            <img src="https://img.etsystatic.com/isla/347b98/27526466/isla_75x75.27526466_lo6ujwee.jpg?version=0" width="50" height="50">
+            <img src="https://img.etsystatic.com/isla/347b98/27526466/isla_75x75.27526466_lo6ujwee.jpg?version=0" width="50" height="52">
           </a>
             <button type="button" class="navbar-toggle" data-toggle="collapse"
             data-target=".navbar-collapse">
@@ -37,17 +37,18 @@
           <li role="presentation"><%= link_to "Orders", orders_path %></li>
         </ul>
         <div class="navbar-right">
-            <%= form_tag("/products", method: "get") do %>
-            <%= text_field_tag(:q, nil, id: 'q', value: params[:q], placeholder: "  Find products") %>
-            <%= submit_tag("Search", class: 'btn btn-danger') %>
+          <%= form_tag("/products", method: "get") do %>
+          <%= text_field_tag(:q, nil, id: 'q', value: params[:q], placeholder: "Find products...") %>
+          <%= submit_tag("Search", class: 'btn btn-danger search') %>
+          <% end %>
         </div>
-        <% end %>
       </div>
      </nav>
     </div>
   </header>
-
+<div class="container">
 <%= yield %>
+</div>
 <div class="footer">
   <div class="container">
     <p class"text-muted"><span class="glyphicon glyphicon-grain"></span>Planet Globula 2018</p>
