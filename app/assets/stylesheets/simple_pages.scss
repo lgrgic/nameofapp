@@ -28,6 +28,12 @@ html {
 .navbar-inverse .navbar-toggle {
   border-color: transparent;
 }
+.navbar-inverse .navbar-toggle:focus {
+  background-color: #31814d;
+}
+.navbar-inverse .navbar-toggle:hover {
+  background-color: #c8ead9;
+}
 input {
   border: none;
   padding: 10px 10px 5px 10px;
@@ -36,6 +42,7 @@ input {
 }
 .navbar-inverse {
   border-bottom-color: #ffffff;
+  border-top-color: #ffffff;
 }
 .navbar-inverse .navbar-nav > li > a  {
   color: #ffffff;
@@ -44,12 +51,18 @@ input {
 .navbar-inverse .navbar-nav > li > a:hover {
   color: #339966;
 }
+.navbar-inverse .navbar-collapse {
+  border-color: #ffffff;
+}
 .navbar-brand {
   padding-bottom: 15px;
   padding-top: 0px;
 }
-.carousel-control {
-  color: #c8ead9;
+a.carousel-control {
+  background-color: transparent;
+}
+.text-muted {
+  color: rgba(1, 12, 2, 1);
 }
 .footer {
   text-align: center;
