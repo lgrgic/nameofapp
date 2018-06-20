@@ -79,5 +79,5 @@ Rails.application.configure do
 
   #For the background image
   config.serve_static_assets = true
-  config.assets.compile = true
+  config.assets.compile = false
 end
