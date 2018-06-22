@@ -27,7 +27,15 @@ input.btn.btn-danger.search {
   float: right;
   margin-top: 10px;
 }
-
+ul.nav.navbar-nav li a {
+  transition: 0.8s;
+  color: #ffffff;
+  padding-bottom: 16px;
+}
+ul.nav.navbar-nav li a:hover {
+  background-color: #ffffff;
+  color: #2d8659;
+}
 .navbar-inverse .navbar-toggle {
   border-color: transparent;
 }
@@ -63,6 +71,9 @@ input {
 }
 a.carousel-control {
   background-color: transparent;
+}
+#carousel-example-generic.carousel.slide {
+  margin-top: -25px;
 }
 .text-muted {
   color: rgba(1, 12, 2, 1);

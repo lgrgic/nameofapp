@@ -1,15 +1,15 @@
 <div class="container">
+  <div class="sticky-top">
+    <h1>Orders</h1>
+  </div>
   <div class="row">
     <% @orders.each do |order| %>
       <div class="col-sm-2 col-md-4">
-        <div class="thumbnail">
-        <h1>
-          Order # <%= order.id %>:
-          <%= link_to order.product.name, order %>
-        </h1>
-        <%= image_tag(order.product.image_url, class: "img-responsive") %>
-        <p><%= order.product.description %></p>
-        <strong>€ <%= order.product.price %></strong>
+        <div class="thumbnail orders-page">
+          <h1>Order # <%= order.id %>: <%= order.product.name %></h1>
+          <%= link_to image_tag(order.product.image_url, class: "img-responsive"), order %>
+          <p><%= order.product.description %></p>
+          <strong>€ <%= order.product.price %></strong>
         </div>
       </div><!-- /col -->
     <% end %>

@@ -1,6 +1,6 @@
 <div class="col-md-4">
   <div class="thumbnail">
-    <%= link_to product, :action => 'go' do %>
+    <%= link_to product do %>
     <%= image_tag(product.image_url, class: "img-responsive") if product.image_url%>
     <% end %>
     <strong>Product name:</strong><p><%= product.name %></p>
