@@ -1,0 +1,16 @@
+current directory: /mnt/c/Users/Bibici/Desktop/LukaProjekti/planet/planetglobula/vendor/cache/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+/home/adduser/.rvm/rubies/ruby-2.4.1/bin/ruby -r ./siteconf20180624-1812-tpmcvh.rb extconf.rb
+
+current directory: /mnt/c/Users/Bibici/Desktop/LukaProjekti/planet/planetglobula/vendor/cache/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+make "DESTDIR=" clean
+make: *** No rule to make target 'clean'.  Stop.
+
+current directory: /mnt/c/Users/Bibici/Desktop/LukaProjekti/planet/planetglobula/vendor/cache/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+make "DESTDIR="
+echo "Nada."
+Nada.
+
+current directory: /mnt/c/Users/Bibici/Desktop/LukaProjekti/planet/planetglobula/vendor/cache/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+make "DESTDIR=" install
+echo "Nada."
+Nada.
