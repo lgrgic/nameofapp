@@ -33,9 +33,16 @@
                 <li role="presentation"><%= link_to "Orders", orders_path %></li>
               </ul>
               <div class="navbar-right">
-                <%= form_tag("/products", method: "get") do %>
-                <%= text_field_tag(:q, nil, id: 'q', value: params[:q], placeholder: "Find products...") %>
-                <%= submit_tag("Search", class: 'btn btn-danger') %>
+                  <%= form_tag("/products", method: "get") do %>
+                  <%= text_field_tag(:q, nil, id: 'q', value: params[:q], placeholder: "Find products...") %>
+                  <%= submit_tag("Search", class: 'btn btn-danger') %>
+                  <% end %>
+              </div>
+              <div class="navbar-right">
+                <% if user_signed_in? %>
+                  <%= link_to('Logout', destroy_user_session_path, class: 'btn btn-danger', method: :delete) %>
+                <% else %>
+                  <%= link_to('Login', new_user_session_path, class: 'btn btn-danger') %>
                 <% end %>
               </div>
             </div>
@@ -49,6 +56,10 @@
         <div class="container">
           <p class="text-muted"><span class="glyphicon glyphicon-grain"></span>Planet Globula 2018</p>
         </div>
+      </div>
+      <div class="container notifications">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
       </div>
     </body>
   </html>

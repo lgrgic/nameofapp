@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="thumbnail">
+    <p id="notice"><%= notice %></p>
+    <h1>Users</h1>
+      <% @users.each do |user| %>
+        <strong>First name:</strong><p><%= user.first_name %></p>
+        <strong>Last name:</strong><p><%= user.last_name %></p>
+        <p><%= link_to 'Show', user %></p>
+        <p><%= link_to 'Edit', edit_user_path(user) %></p>
+        <p><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      <% end %>
+    <br>
+    <%= link_to 'New User', new_user_path, class: 'btn btn-danger search' %>
+  </div>
+</div>
