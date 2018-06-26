@@ -52,14 +52,19 @@
       <div class="container">
         <%= yield %>
       </div>
+      <div class="container notifications">
+        <% if notice %>
+            <p id="notice" class="alert alert-success" role="alert"><%= notice %></p>
+        <% end %>
+        <% if alert %>
+          <p id="alert" class="alert alert-danger" role="alert"><%= alert %></p>
+        <% end %>
+      </div>
+      <%= javascript_include_tag 'notifications.js' %>
       <div class="footer">
         <div class="container">
           <p class="text-muted"><span class="glyphicon glyphicon-grain"></span>Planet Globula 2018</p>
         </div>
-      </div>
-      <div class="container notifications">
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
       </div>
     </body>
   </html>

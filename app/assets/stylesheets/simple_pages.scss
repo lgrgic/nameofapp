@@ -69,8 +69,17 @@ input {
   padding-bottom: 15px;
   padding-top: 0px;
 }
-.container.notifications {
+#notice.alert.alert-success {
+  background-color: #daf1e2;
   text-align: center;
+
+}
+#alert.alert.alert-danger {
+  text-align: center;
+}
+.container.notifications {
+  padding-left: 50px;
+  padding-right: 50px;
 }
 a.carousel-control {
   background-color: transparent;
