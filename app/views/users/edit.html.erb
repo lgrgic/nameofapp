@@ -1,10 +1,9 @@
 <div class="container">
   <div class="sticky-top">
     <h1>Editing User</h1>
-
     <%= render 'form', user: @user %>
-
     <%= link_to 'Show', @user %> |
-    <%= link_to 'Back', users_path, class: 'btn btn-danger search' %>
+    <%= link_to 'Back', users_path, class: 'btn btn-danger red' %>
+    <%= link_to 'Edit password', edit_user_registration_path, class: 'btn btn-danger red' %>
   </div>
 </div>
