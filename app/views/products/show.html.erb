@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<div class="container-fluid">
+<div class="container">
   <div class="show-product">
     <div class="thumbnail">
       <p>
@@ -26,9 +26,32 @@
         <strong>Price €:</strong>
         <%= @product.price %>
       </p>
-
+      <p>
+      <strong><span style="font-size:20px;cursor:pointer" onclick="openNav()">See reviews</span></strong>
+      </p>
       <%= link_to 'Edit', edit_product_path(@product) %> |
       <%= link_to 'Back', products_path %>
     </div>
   </div>
 </div>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div id="main">
+      <div class="thumbnail">
+        <h2><span class="glyphicon glyphicon-ok-circle"><strong> Reviews</strong></span></h2>
+        <hr>
+        <p>Highest review: <%= @product.highest_rating_comment %> </p>
+        <p>Lowest review: <%= @product.lowest_rating_comment %> </p>
+      </div>
+    </div>
+  </div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "280px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
