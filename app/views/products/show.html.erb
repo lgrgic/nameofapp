@@ -12,6 +12,8 @@
         <%= @product.description %>
       </p>
 
+      <p>Review score: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+
       <p>
         <strong>Photo:</strong>
         <%= image_tag(@product.image_url, class: "img-responsive show-photo")%>
@@ -31,20 +33,22 @@
       </p>
       <%= link_to 'Edit', edit_product_path(@product) %> |
       <%= link_to 'Back', products_path %>
+      <%= render 'new_comment' %>
     </div>
   </div>
 </div>
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <div id="main">
-      <div class="thumbnail">
-        <h2><span class="glyphicon glyphicon-ok-circle"><strong> Reviews</strong></span></h2>
-        <hr>
-        <p>Highest review: <%= @product.highest_rating_comment %> </p>
-        <p>Lowest review: <%= @product.lowest_rating_comment %> </p>
-      </div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div id="main">
+    <div class="thumbnail">
+      <h2><span class="glyphicon glyphicon-ok-circle"><strong> Reviews</strong></span></h2>
+      <hr>
+      <%= render 'comments' %>
+      <%= @product.highest_rating_comment %> </p>
+      <%= @product.lowest_rating_comment %> </p>
     </div>
   </div>
+</div>
 
 <script>
 function openNav() {
