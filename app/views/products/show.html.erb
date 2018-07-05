@@ -43,17 +43,11 @@
     <div class="thumbnail">
       <h2><span class="glyphicon glyphicon-ok-circle"><strong> Reviews</strong></span></h2>
       <hr>
-      <%= render 'comments' %>
+      <div id="comments">
+        <%= render 'comments' %>
+      </div>
     </div>
+    <%= will_paginate @comments, renderer: BootstrapPagination::Rails %>
   </div>
 </div>
-
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "280px";
-}
-
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-</script>
+<%= javascript_include_tag 'reviews.js' %>
