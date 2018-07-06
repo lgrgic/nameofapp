@@ -4,21 +4,6 @@ class CommentsController < ApplicationController
     @product = Product.find(params[:product_id])
     @comment = @product.comments.new(comment_params)
     @comment.user = current_user
-    @comment.save
-    redirect_to product_path(@product)
-  end
-
-  def destroy
-    @comment = Comment.find(params[:id])
-    product = @comment.product
-    @comment.destroy
-    redirect_to product
-  end
-
-  def create
-    @product = Product.find(params[:product_id])
-    @comment = @product.comments.new(comment_params)
-    @comment.user = current_user
 
     respond_to do |format|
       if @comment.save
@@ -29,6 +14,13 @@ class CommentsController < ApplicationController
         format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    product = @comment.product
+    @comment.destroy
+    redirect_to product
   end
 
   private
