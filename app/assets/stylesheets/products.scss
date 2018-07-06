@@ -50,7 +50,12 @@ a.btn.btn-danger {
 p {
   word-wrap: break-word;
 }
-
+textarea#comment_body {
+	border-color: rgb(49, 129, 77);
+}
+textarea#product_description {
+  border-color: rgb(49, 129, 77);
+}
 .row > *:nth-child(3n+4) {
   clear: left;
 }

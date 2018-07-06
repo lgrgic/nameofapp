@@ -11,3 +11,4 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w( notifications.js )
 Rails.application.config.assets.precompile += %w( reviews.js )
+Rails.application.config.assets.precompile += %w( about.js )

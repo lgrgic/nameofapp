@@ -95,6 +95,23 @@ a.carousel-control {
 hr {
   border-color: #79c092;
 }
+.img-about img {
+  border-radius: 50%;
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+button.btn.btn-danger.forms {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}
+#type-text {
+  font-style: italic;
+  font-size: 2em;
+}
 .footer {
   text-align: center;
   position: absolute;
