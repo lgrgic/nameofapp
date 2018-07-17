@@ -1,27 +1,15 @@
 require 'rails_helper'
 
-describe OrdersController, type: :controller do
-  let(:user) { User.create!(email: "luka@gmail.com", password: "numberZero")}
-
-  describe 'GET #index' do
-    context 'when a user is logged in' do
-
+  describe OrdersController, type: :controller do
+    context 'GET #index' do
       before do
-        sign_in user
+        @user1 = FactoryBot.create(:user)
       end
 
-      it 'loads correct user details' do
-        get :index
-        expect(response).to be_ok
-      end
-
-    end
-    context 'when a user is not logged in' do
-      it 'redirects to login' do
-        get :index
-        expect(response).to redirect_to(new_user_session_path)
-      end
+    it "doesnt allow non admin user to view" do
+      sign_in(@user1)
+      get :index
+      expect(response).to have_http_status(200)
     end
   end
-
 end

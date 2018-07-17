@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe ProductsController, type: :controller do
-  let(:product) {Product.create!(name: 'terrarium', price: 5.0)}
+  @product = FactoryBot.create(:product)
 
   describe 'GET #index' do
     it 'renders products index template' do

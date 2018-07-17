@@ -2,17 +2,19 @@ require 'rails_helper'
 
 describe Product do
   context "when the product has comments" do
-    let(:product) { Product.create!(name: "handmade notepads")}
-    let(:user) { User.create!(email: "luka@gmail.com", password: "numberOne")}
+  before do
+    @product = FactoryBot.create(:product)
+    @user = FactoryBot.create(:user)
+  end
 
   before do
-    product.comments.create!(rating: 1, user: user, body: "Nice!")
-    product.comments.create!(rating: 3, user: user, body: "Ok!")
-    product.comments.create!(rating: 5, user: user, body: "Great!")
+    @product.comments.create!(rating: 1, user_id: @user.id, body: "Nice!")
+    @product.comments.create!(rating: 3, user_id: @user.id, body: "Ok!")
+    @product.comments.create!(rating: 5, user_id: @user.id, body: "Great!")
   end
 
   it "returns the average rating of all comments" do
-    expect(product.average_rating). to eq 3.0
+    expect(@product.average_rating). to eq 3.0
   end
 
   it "is not valid without a name" do
