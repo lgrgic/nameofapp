@@ -30,6 +30,8 @@ gem 'nokogiri', '~> 1.6', '>= 1.6.7.rc4'
 gem 'puma', '~> 3.11'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+# Payments gem
+gem 'stripe'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
