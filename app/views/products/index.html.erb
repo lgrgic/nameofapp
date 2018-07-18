@@ -8,5 +8,7 @@
 </div>
 <br>
 <div>
-  <%= link_to 'New Product', new_product_path, class:"btn btn-danger" %>
+  <% if signed_in? && current_user.admin? %>
+    <%= link_to 'New Product', new_product_path, class:"btn btn-danger" %>
+  <% end %>
 </div>

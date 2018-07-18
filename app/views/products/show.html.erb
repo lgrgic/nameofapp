@@ -31,7 +31,9 @@
       <p>
       <strong><span style="font-size:20px;cursor:pointer" onclick="openNav()" class="see-reviews">See reviews</span></strong>
       </p>
-      <%= link_to 'Edit', edit_product_path(@product) %> |
+      <% if signed_in? && current_user.admin? %>
+        <%= link_to 'Edit', edit_product_path(@product) %>
+      <% end %>
       <%= link_to 'Back', products_path %>
       <%= render 'new_comment' %>
     </div>

@@ -1,15 +1,20 @@
 require 'rails_helper'
 
-describe OrdersController, type: :controller do
-  @user1 = FactoryBot.create(:user)
+describe CommentsController, type: :controller do
+
+  context 'writes a comment' do
     before do
-      @user1 = FactoryBot.create(:user)
+      @user = FactoryBot.build(:user)
+      @product = FactoryBot.create(:product)
     end
 
-    context 'when a user is not logged in' do
-      it 'redirects to login' do
-        get :index
-        expect(response).to redirect_to(new_user_session_path)
-      end
+    before do
+      sign_in @user
     end
+
+    it 'submitts a comment on the product page' do
+      expect(response).to have_http_status(200)
+    end
+  end
+
 end
