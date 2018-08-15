@@ -18,6 +18,7 @@ class PaymentsController < ApplicationController
 
       if charge.paid
         Order.create(product_id: @product.id, user_id: @user.id, total: @product.price * 100)
+        redirect_to payments_create_path
       end
 
     rescue Stripe::CardError => e
