@@ -32,7 +32,7 @@
       <strong><span style="font-size:20px;cursor:pointer" onclick="openNav()" class="see-reviews">See reviews</span></strong>
       </p>
       <!-- Stripe payments -->
-      <%= form_tag(url: '/payments/create') do |f| %>
+      <%= form_tag "/payments/create" do %>
         <%= render partial: "shared/stripe_checkout_button" %>
         <%= hidden_field_tag(:product_id, @product.id) %>
       <% end %>
