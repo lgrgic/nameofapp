@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'info@planetglobula.com'
+  default from: 'noreply@planetglobula.com'
   layout 'mailer'
 end
