@@ -32,7 +32,9 @@
                 <li role="presentation"><%= link_to "Products", products_path %></li>
                 <li role="presentation"><%= link_to "Orders", orders_path %></li>
                 <% if signed_in? && current_user.admin? %>
-                <li role="presentation"><%= link_to "Users", users_path %></li>
+                  <li role="presentation"><%= link_to "Accounts", users_path %></li>
+                <% elsif signed_in? && current_user %>
+                  <li role="presentation"><%= link_to "My Account", users_path %></li>
                 <% end %>
               </ul>
               <div class="navbar-right">

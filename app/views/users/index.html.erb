@@ -5,12 +5,15 @@
       <% @users.each do |user| %>
         <strong>First name:</strong><p><%= user.first_name %></p>
         <strong>Last name:</strong><p><%= user.last_name %></p>
+        <strong>Email:</strong><p><%= user.email %></p>
         <p><%= link_to 'Show', user %></p>
         <p><%= link_to 'Edit', edit_user_path(user) %></p>
         <p><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></p>
         <hr>
       <% end %>
     <br>
-    <%= link_to 'New User', new_user_path, class: 'btn btn-danger red' %>
+    <% if current_user.admin? %>
+      <%= link_to 'New User', new_user_path, class: 'btn btn-danger red' %>
+    <% end %>
   </div>
 </div>
