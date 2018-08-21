@@ -4,7 +4,9 @@
 </div>
 <div class="row">
   <% if @products.length > 0 %>
-    <%= render @products %>
+    <% cache(cache_key_for_products) do %>
+      <%= render @products %>
+    <% end %>
   <% elsif params[:q] %>
   <div class="sticky-top">
     <p>No products matched your query for <strong>'<%= params[:q] %>'</strong>. Please try again!</p>
