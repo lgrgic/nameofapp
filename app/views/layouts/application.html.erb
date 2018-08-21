@@ -38,10 +38,10 @@
                 <% end %>
               </ul>
               <div class="navbar-right">
-                  <%= form_tag("/products", method: "get") do %>
-                  <%= text_field_tag(:q, nil, id: 'q', value: params[:q], placeholder: "Find products...") %>
-                  <%= submit_tag("Search", class: 'btn btn-danger') %>
-                  <% end %>
+                <%= form_tag("/products", method: "get") do %>
+                <%= text_field_tag(:q, nil, id: 'q', value: params[:q], placeholder: "Find products...") %>
+                <%= submit_tag("Search", class: 'btn btn-danger') %>
+                <% end %>
               </div>
               <div class="navbar-right">
                 <% if user_signed_in? %>

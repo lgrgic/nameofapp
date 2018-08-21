@@ -47,12 +47,10 @@
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div id="main">
-    <div class="thumbnail">
-      <h2><span class="glyphicon glyphicon-ok-circle"><strong> Reviews</strong></span></h2>
-      <hr>
-      <div id="comments">
-        <%= render 'comments' %>
-      </div>
+    <h2><span class="glyphicon glyphicon-ok-circle"><strong> Reviews</strong></span></h2>
+    <hr>
+    <div id="comments">
+      <%= render 'comments' %>
     </div>
     <%= will_paginate @comments, renderer: BootstrapPagination::Rails %>
   </div>

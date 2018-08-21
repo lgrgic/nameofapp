@@ -3,10 +3,24 @@
   <h4>Currently available in our shop</h4>
 </div>
 <div class="row">
-  <%= render @products %>
-</div>
+  <% if @products.length > 0 %>
+    <%= render @products %>
+  <% elsif params[:q] %>
+  <div class="sticky-top">
+    <p>No products matched your query for <strong>'<%= params[:q] %>'</strong>. Please try again!</p>
+    <div class="navbar">
+      <%= form_tag("/products", method: "get") do %>
+      <%= text_field_tag(:q, nil, id: 'q', value: params[:q], placeholder: "Find products...") %>
+      <%= submit_tag("Search", class: 'btn btn-danger') %>
+      <% end %>
+    </div>
+  <% else %>
+    <p>No products were found.</p>
+  <% end %>
+  </div>
+
 <br>
-<div>
+
   <% if signed_in? && current_user.admin? %>
     <%= link_to 'New Product', new_product_path, class:"btn btn-danger" %>
   <% end %>
