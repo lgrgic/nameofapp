@@ -32,7 +32,7 @@
       <% end %>
 
       <% if signed_in? && current_user.admin? %>
-        <%= link_to edit_product_path(product) do %><span class="glyphicon glyphicon-pencil"></span><% end %>
+        <%= link_to edit_product_path(@product) do %><span class="glyphicon glyphicon-pencil"></span><% end %>
       <% end %>
       <%= link_to 'Back', products_path %>
       <%= render 'new_comment' %>

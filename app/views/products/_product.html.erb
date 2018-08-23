@@ -1,8 +1,7 @@
-<% cache product do %>
 <div class="col-md-4">
   <div class="thumbnail">
     <%= link_to product do %>
-    <%= image_tag(product.image_url, class: "img-responsive") if product.image_url%>
+  <%= image_tag(product.image_url, class: "img-responsive") if product.image_url%>
     <% end %>
     <strong>Product name:</strong><p><%= product.name %></p>
     <strong>Details:</strong><p><%= product.description %></p>
@@ -14,9 +13,7 @@
     <% if signed_in? && current_user.admin? %>
       <p><%= link_to edit_product_path(product) do %><span class="glyphicon glyphicon-pencil"></span><% end %></p>
       <p><%= link_to product_path(product), method: :delete, data: { confirm: 'Are you sure?' } do %><span class="glyphicon glyphicon-trash"></span><% end %></p>
-    <% else %>
-      <p><%= link_to 'Show', product %></p>
     <% end %>
+    <p><%= link_to 'Show', product %></p>
   </div>
 </div>
-<% end %>

@@ -29,7 +29,7 @@
                 <li role="presentation"><%= link_to root_path do %><span class="glyphicon glyphicon-home"></span><% end %></li>
                 <li role="presentation"><%= link_to "About", simple_pages_about_path %></li>
                 <li role="presentation"><%= link_to "Contact", simple_pages_contact_path %></li>
-                <li role="presentation"><%= link_to "Products", products_path %></li>
+                <li role="presentation"><%= link_to products_path do %><span>Products</span><% end %></li>
                 <li role="presentation"><%= link_to orders_path do %><span class="glyphicon glyphicon-shopping-cart"></span><% end %></li>
                 <% if signed_in? && current_user.admin? %>
                   <li role="presentation"><%= link_to users_path do%><span class="glyphicon glyphicon-user"></span><% end %></li>
