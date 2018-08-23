@@ -1,0 +1,14 @@
+<div class="overlay"></div>
+  <div class="feedback-container">
+    <span class="btn btn-primary rotate feedback-btn">
+      Feedback
+    </span>
+    <div class="feedback-form">
+      <%= form_tag("/simple_pages/feedback") do %>
+      <div class="form-group">
+        <%= text_area_tag(:message, "", class: "form-control", placeholder: "Send us your feedback!", required: "true", rows: 10) %>
+      </div>
+      <%= submit_tag("Send", class: 'btn btn-danger search') %>
+      <% end %>
+    </div>
+  </div>

@@ -4,11 +4,12 @@ Rails.application.routes.draw do
   resources :products do
     resources :comments
   end
-  resources :orders, only: [:index, :show, :create, :destroy]
+  resources :orders
   get 'simple_pages/index'
   get 'simple_pages/about'
   get 'simple_pages/contact'
   post 'simple_pages/thank_you'
+  post 'simple_pages/feedback'
   post 'payments/create'
   get 'payments/create'
   root 'simple_pages#landing_page'

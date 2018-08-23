@@ -57,6 +57,7 @@
       <div class="container">
           <%= yield %>
       </div>
+      <%= render partial: "shared/feedback_form" %>
       <div class="container notifications">
         <% if notice %>
             <p id="notice" class="alert alert-success" role="alert"><%= notice %></p>

@@ -25,4 +25,9 @@ $(document).on('turbolinks:load', function() {
       lensFadeIn: 500,
       lensFadeOut: 500
     });
+
+    $('.feedback-btn').on('click', function() {
+      $('.feedback-form').toggleClass('show');
+      $('.overlay').toggleClass('show');
+    });
 });

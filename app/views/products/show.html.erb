@@ -16,7 +16,7 @@
         <strong>Photo:</strong>
         <%= image_tag(@product.image_url, class: "img-responsive show-photo img-zoom", data_zoom_image: "@product.product_image.url")%>
       </p>
-<p>Views: <span class="badge"><%= @product.views %></span></p>
+      <p>Product views: <span class="badge"><%= @product.views %></span></p>
       <p>
         <strong>Color:</strong>
         <%= @product.colour %>
