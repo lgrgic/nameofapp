@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'simple_pages/about'
   get 'simple_pages/contact'
   post 'simple_pages/thank_you'
+  get 'simple_pages/feedback'
   post 'simple_pages/feedback'
   post 'payments/create'
   get 'payments/create'
