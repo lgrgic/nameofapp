@@ -17,6 +17,5 @@ class SimplePagesController < ApplicationController
   def feedback
     @message = params[:message]
     UserMailer.contact_form(@email, @name, @message).deliver_now
-    redirect_to root_url, notice: "Thank you. We have received your feedback! :)"
   end
 end
