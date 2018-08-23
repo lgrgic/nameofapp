@@ -27,7 +27,7 @@ $(document).on('turbolinks:load', function() {
     });
 
     $('.feedback-btn').on('click', function() {
-      $('.feedback-form').toggleClass('show');
-      $('.overlay').toggleClass('show');
+      $('.feedback-form').fadeToggle(500);
+      $('.overlay').fadeToggle(500);
     });
 });

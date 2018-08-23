@@ -6,8 +6,8 @@
         <strong>Last name:</strong><p><%= user.last_name %></p>
         <strong>Email:</strong><p><%= user.email %></p>
         <p><%= link_to 'Show', user %></p>
-        <p><%= link_to 'Edit', edit_user_path(user) %></p>
-        <p><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <p><%= link_to edit_user_path(user) do %><span class="glyphicon glyphicon-pencil"></span><% end %></p>
+        <p><%= link_to user, method: :delete, data: { confirm: 'Are you sure?' } do %><span class="glyphicon glyphicon-trash"></span><% end %></p>
         <hr>
       <% end %>
     <br>
