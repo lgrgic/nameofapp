@@ -7,6 +7,12 @@ class UserMailer < ApplicationMailer
          subject: "A new contact form message from #{name}")
   end
 
+  def feedback_form(message)
+  @message = message
+    mail(to: 'lukagrgic14@gmail.com',
+         subject: "You have received a new feedback")
+  end
+
   def welcome(user)
     @appname = "Planet Globula"
     mail(to: user.email,

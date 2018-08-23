@@ -16,6 +16,6 @@ class SimplePagesController < ApplicationController
 
   def feedback
     @message = params[:message]
-    UserMailer.contact_form(@email, @name, @message).deliver_now
+    UserMailer.feedback_form(@message).deliver_now
   end
 end
