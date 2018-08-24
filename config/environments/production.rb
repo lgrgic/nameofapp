@@ -90,4 +90,7 @@ Rails.application.configure do
   #For the background image
   config.serve_static_assets = true
   config.assets.compile = false
+
+  config.web_socket_server_url = "wss://planetglobula.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://planetglobula.herokuapp.com', 'http://planetglobula.herokuapp.com']
 end

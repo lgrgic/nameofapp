@@ -1,0 +1,10 @@
+development:
+  adapter: async
+
+test:
+  adapter: async
+
+production:
+  adapter: postgresql
+  url: postgres://xahdnlioagouny:0b1d06b0f02330b92e1341db65911ae9c664a370488b4010e6a492026b57f8d4@ec2-54-243-40-26.compute-1.amazonaws.com:5432/d6dhmkeqncmvoq
+channel_prefix: planetglobula_production
