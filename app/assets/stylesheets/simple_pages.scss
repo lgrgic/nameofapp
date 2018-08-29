@@ -6,6 +6,8 @@ body {
   margin-bottom: 60px;
   background-image: url(image-path("leafs.JPG"));
   background-attachment: fixed;
+  background-position: 0px 0px;
+  animation: animatedBackground 100s linear infinite;
 }
 /* Footer */
 html {
@@ -129,3 +131,6 @@ button.btn.btn-danger.forms {
   border-radius: 0px;
 }
 /*End footer*/
+@keyframes animatedBackground {
+	to { background-position: 100% 0; }
+}

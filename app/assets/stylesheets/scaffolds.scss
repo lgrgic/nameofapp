@@ -165,3 +165,12 @@ span.glyphicon.glyphicon-ok-circle {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+.img-responsive {
+  transition: transform .8s;
+  border-radius: 4px;
+}
+.img-responsive:hover {
+  -ms-transform: scale(1.03); /* IE 9 */
+  -webkit-transform: scale(1.03); /* Safari 3-8 */
+  transform: scale(1.03);
+}
